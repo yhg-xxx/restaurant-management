@@ -1,0 +1,29 @@
+# Node / frontend
+node_modules/
+dist/
+.vite/
+*.local
+
+# Java / Maven
+target/
+*.class
+*.jar
+*.war
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.iws
+*.ipr
+
+# Runtime uploads
+uploads/
+
+# Secrets / local overrides
+.env
+.env.*
+application-local.yaml
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,31 @@
+spring:
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:local}
+
+  datasource:
+    driver-class-name: org.opengauss.Driver
+    url: ${DB_URL:jdbc:opengauss://localhost:5432/rest}
+    username: ${DB_USER:opengauss}
+    password: ${DB_PASSWORD:}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+        query:
+          in_clause_parameter_padding: true
+
+  # 文件上传大小配置
+  servlet:
+    multipart:
+      max-file-size: 5MB        # 单个文件最大5MB
+      max-request-size: 10MB    # 整个请求最大10MB
+      enabled: true             # 启用文件上传支持
+
+server:
+  port: 8080

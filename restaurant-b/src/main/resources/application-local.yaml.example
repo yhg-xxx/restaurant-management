@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:opengauss://localhost:5432/rest
+    username: your_username
+    password: your_password
